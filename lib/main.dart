@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
+import 'package:youth_care/presentation/news/news_screen.dart';
 import 'package:youth_care/presentation/splash/splash_screen.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class YouthCare extends StatelessWidget{
       routes: {
         SplashScreen.id :(context) => SplashScreen(),
         LoginScreen.id :(context) => LoginScreen(),
+        NewsScreen.id:(context) => NewsScreen(),
       },
       initialRoute: SplashScreen.id,
     );

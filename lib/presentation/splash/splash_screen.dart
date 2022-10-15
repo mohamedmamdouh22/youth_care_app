@@ -5,6 +5,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:youth_care/animation_route.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
+import 'package:youth_care/presentation/news/news_screen.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
   static String id = 'splashscreen';
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       percent: 1,
                       onAnimationEnd: () {
                         //Navigator.push(context, SlideRight(Page: LoginScreen()));
-                        Navigator.pushNamed(context, LoginScreen.id);
+                        Navigator.pushNamed(context, NewsScreen.id);
                       },
                       barRadius: Radius.circular(20),
                       progressColor: primaryColor,
