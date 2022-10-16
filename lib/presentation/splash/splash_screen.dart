@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:youth_care/animation_route.dart';
 import 'package:youth_care/constants.dart';
+import 'package:youth_care/logic/news/news_cubit.dart';
+import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
 class SplashScreen extends StatefulWidget {
@@ -35,7 +38,9 @@ class _SplashScreenState extends State<SplashScreen> {
                       percent: 1,
                       onAnimationEnd: () {
                         //Navigator.push(context, SlideRight(Page: LoginScreen()));
-                        Navigator.pushNamed(context, NewsScreen.id);
+                        Navigator.pushNamedAndRemoveUntil(context, LayoutScreen.id, (route) => false);
+                        // BlocProvider.of<NewsCubit>(context).getNews();
+                        BlocProvider.of<NewsCubit>(context).getNews();
                       },
                       barRadius: Radius.circular(20),
                       progressColor: primaryColor,

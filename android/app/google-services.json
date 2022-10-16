@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "200874199843",
+    "project_id": "youth-care-b8068",
+    "storage_bucket": "youth-care-b8068.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200874199843:android:333534ead61dac356f5a96",
+        "android_client_info": {
+          "package_name": "com.example.youth_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200874199843-b3783i8sbtcdou1s3ebsnsth2dfr7f8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkUft4_Y92PDND7i55jRM9OixA-8rWg-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200874199843-b3783i8sbtcdou1s3ebsnsth2dfr7f8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
