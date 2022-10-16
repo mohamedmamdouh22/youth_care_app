@@ -5,14 +5,15 @@ import 'package:youth_care/constants.dart';
 import 'package:youth_care/logic/news/news_cubit.dart';
 import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
-import 'package:youth_care/presentation/news/add_news.dart';
+import 'package:youth_care/presentation/news/add_news/add_news.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
 import 'package:youth_care/presentation/splash/splash_screen.dart';
 import 'package:youth_care/presentation/widgets/news_card.dart';
 
 import 'firebase_options.dart';
-void main()async {
-    WidgetsFlutterBinding.ensureInitialized();
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -25,7 +26,9 @@ class YouthCare extends StatelessWidget {
     // TODO: implement build
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => NewsCubit(),)
+        BlocProvider(
+          create: (context) => NewsCubit(),
+        )
       ],
       child: MaterialApp(
         theme: ThemeData(

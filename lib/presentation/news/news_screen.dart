@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/data/models/news_model.dart';
 import 'package:youth_care/logic/news/news_cubit.dart';
-import 'package:youth_care/presentation/news/add_news.dart';
+import 'package:youth_care/presentation/news/add_news/add_news.dart';
 import 'package:youth_care/presentation/widgets/divider.dart';
 import 'package:youth_care/presentation/widgets/news_card.dart';
 
@@ -30,9 +30,9 @@ class NewsScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: BlocBuilder<NewsCubit, NewsState>(
-        
         builder: (context, state) {
-          List<NewsModel> newslist=BlocProvider.of<NewsCubit>(context).newsList;
+          List<NewsModel> newslist =
+              BlocProvider.of<NewsCubit>(context).newsList;
           return ListView.separated(
               separatorBuilder: (context, index) => CustomDivider(),
               itemCount: newslist.length,
