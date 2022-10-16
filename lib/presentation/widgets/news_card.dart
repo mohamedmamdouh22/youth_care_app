@@ -5,6 +5,7 @@ import 'package:youth_care/animation_route.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/data/models/news_model.dart';
 import 'package:youth_care/presentation/news/add_news.dart';
+import 'package:youth_care/presentation/news/news_detalis.dart';
 
 class NewsCard extends StatelessWidget {
   NewsCard({required this.news});
@@ -17,7 +18,7 @@ class NewsCard extends StatelessWidget {
       child: GestureDetector(
         onTap:() {
         // Navigator.pushNamed(context, AddNews.id,arguments: news);
-        Navigator.push(context, SlideRight(Page: AddNews(news: news,)));
+        Navigator.push(context, SlideRight(Page: NewsDetails(news: news,)));
         }, 
         child: Card(
             child: Column(
