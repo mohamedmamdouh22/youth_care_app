@@ -37,7 +37,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  modal_progress_hud_nsn: ^0.3.0
   percent_indicator: ^4.2.2
+  top_snackbar_flutter: ^2.1.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0

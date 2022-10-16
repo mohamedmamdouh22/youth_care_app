@@ -38,9 +38,10 @@ class _SplashScreenState extends State<SplashScreen> {
                       percent: 1,
                       onAnimationEnd: () {
                         //Navigator.push(context, SlideRight(Page: LoginScreen()));
-                        Navigator.pushNamedAndRemoveUntil(context, LayoutScreen.id, (route) => false);
-                        // BlocProvider.of<NewsCubit>(context).getNews();
                         BlocProvider.of<NewsCubit>(context).getNews();
+                        Navigator.pushNamedAndRemoveUntil(context, LoginScreen.id, (route) => false);
+                       
+                        
                       },
                       barRadius: Radius.circular(20),
                       progressColor: primaryColor,

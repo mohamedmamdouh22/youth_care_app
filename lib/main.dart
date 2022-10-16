@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youth_care/constants.dart';
+import 'package:youth_care/logic/login/login_cubit.dart';
 import 'package:youth_care/logic/news/news_cubit.dart';
 import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
@@ -25,14 +26,17 @@ class YouthCare extends StatelessWidget {
     // TODO: implement build
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => NewsCubit(),)
+        BlocProvider(create: (context) => NewsCubit(),),
+        BlocProvider(create: (context) => LoginCubit(),)
       ],
+
       child: MaterialApp(
+        
         theme: ThemeData(
             primaryColor: primaryColor, primaryColorLight: primaryColor),
         routes: {
           SplashScreen.id: (context) => const SplashScreen(),
-          LoginScreen.id: (context) => const LoginScreen(),
+          LoginScreen.id: (context) =>  LoginScreen(),
           NewsScreen.id: (context) => NewsScreen(),
           LayoutScreen.id: (context) => const LayoutScreen(),
           AddNews.id: (context) => const AddNews(),
