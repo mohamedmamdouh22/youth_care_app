@@ -39,7 +39,7 @@ class YouthCare extends StatelessWidget {
           LoginScreen.id: (context) =>  LoginScreen(),
           NewsScreen.id: (context) => NewsScreen(),
           LayoutScreen.id: (context) => const LayoutScreen(),
-          AddNews.id: (context) => const AddNews(),
+          // AddNews.id: (context) => AddNews(),
         },
         initialRoute: SplashScreen.id,
       ),
