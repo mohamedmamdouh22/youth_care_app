@@ -8,6 +8,8 @@ import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
 import 'package:youth_care/presentation/news/add_news/add_news.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
+import 'package:youth_care/presentation/settings/contact_screen.dart';
+import 'package:youth_care/presentation/settings/dean_speech.dart';
 import 'package:youth_care/presentation/splash/splash_screen.dart';
 import 'package:youth_care/presentation/widgets/news_card.dart';
 import 'firebase_options.dart';
@@ -42,6 +44,8 @@ class YouthCare extends StatelessWidget {
           SplashScreen.id: (context) => const SplashScreen(),
           LoginScreen.id: (context) => LoginScreen(),
           AddNews.id: (context) => AddNews(),
+          DeanSpeech.id: (context) =>const DeanSpeech(),
+          ContactScreen.id: (context) => ContactScreen(),
           NewsScreen.id: (context) => NewsScreen(),
           LayoutScreen.id: (context) => const LayoutScreen(),
           TakafulRequest.id: (context) => TakafulRequest()

@@ -19,7 +19,7 @@ class NewsCubit extends Cubit<NewsState> {
       news.orderBy('time').snapshots().listen((event) {
         newsList.clear();
         for (var doc in event.docs) {
-          print(doc);
+          
           newsList.add(NewsModel.fromJson(doc));
         }
 

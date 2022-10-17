@@ -36,6 +36,7 @@ class LoginScreen extends StatelessWidget {
           isAsync=false;
           emialcontroller.clear();
           passwordcontroller.clear();
+          BlocProvider.of<LoginCubit>(context).visiblePassword=true;
         } else if(state is LoginFailure) {
               showTopSnackBar(
                 context, CustomSnackBar.error(message: state.errMessage));

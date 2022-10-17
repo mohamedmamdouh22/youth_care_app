@@ -86,6 +86,7 @@ class AddNewsBody extends StatelessWidget {
                 // News Title
                 AddNewsFormField(
                   hintText: 'Title',
+                  
                   height: 100,
                   fontSize: 30,
                   onChanged: (n) {
