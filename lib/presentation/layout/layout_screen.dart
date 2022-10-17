@@ -2,8 +2,10 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
+import 'package:youth_care/presentation/settings/setting_screen.dart';
 import 'package:youth_care/presentation/takeful/takful_info.dart';
 
 class LayoutScreen extends StatefulWidget {
@@ -42,7 +44,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
           },
           children: <Widget>[
             NewsScreen(),
-            TakeFullScreen()
+            TakeFullScreen(),
+            SettingScreen()
           ],
         ),
       ),
@@ -59,9 +62,9 @@ class _LayoutScreenState extends State<LayoutScreen> {
             icon: Icon(Icons.newspaper)
           ),
           BottomNavyBarItem(
-            title: Text('TakeFul'),
+            title: Text('  TakeFul'),
             activeColor: primaryColor,
-            icon: Icon(Icons.help)
+            icon: Icon(FontAwesomeIcons.handshakeAngle)
           ),
           BottomNavyBarItem(
             title: Text('Setting'),

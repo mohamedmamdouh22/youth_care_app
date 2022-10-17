@@ -37,6 +37,7 @@ class AddNewsFormField extends StatelessWidget {
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: hintText,
+              hintStyle: TextStyle(color: Colors.white)
             ),
           ),
         ),
