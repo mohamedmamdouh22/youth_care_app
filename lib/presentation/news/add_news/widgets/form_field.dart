@@ -5,9 +5,15 @@ class AddNewsFormField extends StatelessWidget {
   AddNewsFormField({
     super.key,
     required this.height,
+    required this.hintText,
+    required this.fontSize,
+    required this.onChanged,
   });
 
   double height;
+  String hintText;
+  double fontSize;
+  Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +26,9 @@ class AddNewsFormField extends StatelessWidget {
           color: primaryColor.withAlpha(200),
           padding: EdgeInsets.symmetric(horizontal: SCREEN_PADDING),
           child: TextFormField(
+            onChanged: onChanged,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: fontSize,
               color: Color.fromARGB(255, 240, 245, 255),
             ),
             keyboardType: TextInputType.multiline,
@@ -29,6 +36,7 @@ class AddNewsFormField extends StatelessWidget {
             maxLines: 3,
             decoration: InputDecoration(
               border: InputBorder.none,
+              hintText: hintText,
             ),
           ),
         ),
