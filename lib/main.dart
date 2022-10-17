@@ -12,6 +12,7 @@ import 'package:youth_care/presentation/splash/splash_screen.dart';
 import 'package:youth_care/presentation/widgets/news_card.dart';
 
 import 'firebase_options.dart';
+import 'presentation/takeful/add_takeful.dart';
 void main()async {
     WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -31,7 +32,7 @@ class YouthCare extends StatelessWidget {
       ],
 
       child: MaterialApp(
-        
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
             primaryColor: primaryColor, primaryColorLight: primaryColor),
         routes: {
@@ -39,6 +40,7 @@ class YouthCare extends StatelessWidget {
           LoginScreen.id: (context) =>  LoginScreen(),
           NewsScreen.id: (context) => NewsScreen(),
           LayoutScreen.id: (context) => const LayoutScreen(),
+          TakafulRequest.id :(context) => TakafulRequest()
           // AddNews.id: (context) => AddNews(),
         },
         initialRoute: SplashScreen.id,
