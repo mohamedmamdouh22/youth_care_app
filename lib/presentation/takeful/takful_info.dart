@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youth_care/constants.dart';
+import 'package:youth_care/presentation/news/news_screen.dart';
 import 'package:youth_care/presentation/takeful/add_takeful.dart';
 
 class TakeFullScreen extends StatelessWidget {
@@ -19,10 +20,9 @@ class TakeFullScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
+          backgroundColor: primaryColor,
           title: const Text(
             'إدراة رعاية الشباب',
             style: TextStyle(fontSize: 25),
@@ -52,7 +52,7 @@ class TakeFullScreen extends StatelessWidget {
               margin: const EdgeInsets.all(8),
               alignment: Alignment.centerRight,
               decoration: BoxDecoration(
-                border: Border.all(width: 0, color: Colors.blue),
+                border: Border.all(width: 0, color: primaryColor),
               ),
               child: Column(
                 children: [
@@ -60,7 +60,7 @@ class TakeFullScreen extends StatelessWidget {
                     width: double.infinity,
                     alignment: Alignment.centerRight,
                     decoration: BoxDecoration(
-                      border: Border.all(width: 1, color: Colors.blue),
+                      border: Border.all(width: 1, color: primaryColor),
                     ),
                     child: const Text(
                         'منحة من صندوق التكافل الأجتماعى الطلابى',
@@ -88,7 +88,7 @@ class TakeFullScreen extends StatelessWidget {
               margin: const EdgeInsets.all(8),
               alignment: Alignment.centerRight,
               decoration: BoxDecoration(
-                border: Border.all(width: 0, color: Colors.blue),
+                border: Border.all(width: 0, color: primaryColor),
               ),
               child: Column(
                 children: [
@@ -96,7 +96,7 @@ class TakeFullScreen extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.only(left: 48),
                     decoration: BoxDecoration(
-                      border: Border.all(width: 1, color: Colors.blue),
+                      border: Border.all(width: 1, color: primaryColor),
                     ),
                     child: const Text(
                         'إجراءات الحصول على دعم صندوق التكافل الأجتماعى',
@@ -129,28 +129,21 @@ class TakeFullScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, TakafulRequest.id, (route) => false);
+                      Navigator.pushNamed(
+                          context, TakafulRequest.id);
                     },
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10)),
                     child: const Text('تقديم الطلب',
                         style: TextStyle(fontSize: 16))),
-                ElevatedButton(
-                    onPressed: () {
-                      // go back to news page
-                    },
-                    style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 10)),
-                    child: const Text('العودة الى صفحة الأخبار',
-                        style: TextStyle(fontSize: 16))),
+               
               ],
             )
           ],
         ),
-      ),
+      
     );
   }
 }

@@ -61,7 +61,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
           BottomNavyBarItem(
             title: Text('TakeFul'),
             activeColor: primaryColor,
-            icon: Icon(Icons.apps)
+            icon: Icon(Icons.help)
           ),
           BottomNavyBarItem(
             title: Text('Setting'),

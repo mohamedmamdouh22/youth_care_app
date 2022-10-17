@@ -28,6 +28,7 @@ class NewsDetails extends StatelessWidget {
       body: Padding(
         padding:  EdgeInsets.symmetric(horizontal: size.width/30),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Image.network(
               news.image,
@@ -46,6 +47,7 @@ class NewsDetails extends StatelessWidget {
            CustomDivider(),
            SizedBox(height: size.height/40),
             Text(
+              textAlign: TextAlign.end,
               news.des,
               style: TextStyle(
                 fontWeight: FontWeight.w400,

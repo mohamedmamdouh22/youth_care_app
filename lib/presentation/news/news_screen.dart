@@ -16,7 +16,7 @@ class NewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('News'),
+        title: Text('الاخبار'),
         actions: [
           IconButton(
             onPressed: () {

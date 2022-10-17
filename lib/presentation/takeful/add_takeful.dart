@@ -20,6 +20,7 @@ class _TakafulRequestState extends State<TakafulRequest> {
       inAsyncCall: requestLoading,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: primaryColor,
           title: const Text(
             'إدراة رعاية الشباب',
             style: TextStyle(fontSize: 25),
