@@ -130,7 +130,7 @@ class TakeFullScreen extends StatelessWidget {
                 ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(
-                          context, TakafulRequest.id);
+                          context, TakafulRequester.id);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: primaryColor,
