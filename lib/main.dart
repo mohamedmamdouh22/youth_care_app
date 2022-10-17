@@ -10,7 +10,6 @@ import 'package:youth_care/presentation/news/add_news/add_news.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
 import 'package:youth_care/presentation/splash/splash_screen.dart';
 import 'package:youth_care/presentation/widgets/news_card.dart';
-
 import 'firebase_options.dart';
 import 'presentation/takeful/add_takeful.dart';
 

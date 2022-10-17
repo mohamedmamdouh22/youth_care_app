@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:youth_care/animation_route.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/data/models/news_model.dart';
-import 'package:youth_care/presentation/news/add_news.dart';
+
 import 'package:youth_care/presentation/news/news_detalis.dart';
 
 class NewsCard extends StatelessWidget {
