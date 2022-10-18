@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/logic/login/login_cubit.dart';
 import 'package:youth_care/logic/news/news_cubit.dart';
+import 'package:youth_care/logic/requests/request_cubit.dart';
 import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
 import 'package:youth_care/presentation/news/add_news/add_news.dart';
@@ -34,7 +35,10 @@ class YouthCare extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => LoginCubit(),
-        )
+        ),
+        BlocProvider(
+          create: (context) => RequestCubit(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

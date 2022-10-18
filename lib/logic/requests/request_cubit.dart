@@ -16,19 +16,23 @@ class RequestCubit extends Cubit<RequestState> {
     emit(RequestLoading());
     CollectionReference requestCollection =
         FirebaseFirestore.instance.collection('takefuls');
-    await requestCollection
-        .add({
-          'name': name,
-          'natId': nat_id,
-          'email': stdemail,
-          'phone': phone,
-          'depart': dep,
-          'ferka': ferka,
-          'requestOn': DateTime.now(),
-        })
-        .then((value) => emit(RequestSuccess()))
-        .catchError((error) => emit(RequestFailure(
-            errMessage: 'Something Wrong Within Adding Request')));
+    await requestCollection.add({
+      'name': name,
+      'natId': nat_id,
+      'email': stdemail,
+      'phone': phone,
+      'depart': dep,
+      'ferka': ferka,
+      'requestOn': DateTime.now(),
+    }).then((value) {
+      setDepartement('القسم');
+      setFerka('الفرقة');
+      emit(RequestSuccess());
+    }).catchError((error) {
+      setDepartement('القسم');
+      setFerka('الفرقة');
+      emit(RequestFailure(errMessage: 'Something Wrong Within Adding Request'));
+    });
   }
 
   void setDepartement(String choice) {
