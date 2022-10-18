@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
           isAsync = true;
         } else if (state is LoginSuccess) {
            showTopSnackBar(
-                context, CustomSnackBar.success(message: 'Welcome Back !'));
+                context, const CustomSnackBar.success(message: 'Welcome Back !'));
           // BlocProvider.of<NewsCubit>(context).getNews();
           Navigator.pushNamedAndRemoveUntil(context, LayoutScreen.id, (route) => false);
           isAsync=false;
@@ -50,23 +50,23 @@ class LoginScreen extends StatelessWidget {
           child: Scaffold(
             backgroundColor: Colors.white,
             body: Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Form(
                 key: fromKey,
                 child: ListView(
                   children: [
                     
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     Image.asset(
                       shoubra,
                       height: 220,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: Text(
                         'Login',
@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                             color: Color(0xff3f5061)),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     CustomFormTextField(
@@ -101,7 +101,7 @@ class LoginScreen extends StatelessWidget {
                       },
                       obscureText: BlocProvider.of<LoginCubit>(context).visiblePassword,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     CustomButton(
