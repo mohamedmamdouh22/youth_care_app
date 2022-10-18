@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youth_care/constants.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
+import 'package:youth_care/presentation/settings/change_password.dart';
 import 'package:youth_care/presentation/settings/contact_screen.dart';
 import 'package:youth_care/presentation/settings/dean_speech.dart';
 import 'package:youth_care/presentation/widgets/setting_card.dart';
@@ -35,6 +36,16 @@ class SettingScreen extends StatelessWidget {
       title: 'Contact Us',
       ontap: () {
         Navigator.pushNamed(context, ContactScreen.id);
+      },
+    ),
+        SettingCard(
+      icon: Icon(
+        FontAwesomeIcons.lock,
+        color: primaryColor,
+      ),
+      title: 'Change Password',
+      ontap: () {
+        Navigator.pushNamed(context, ChangePassword.id);
       },
     ),
     SettingCard(

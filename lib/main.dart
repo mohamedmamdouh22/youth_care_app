@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youth_care/constants.dart';
+import 'package:youth_care/logic/change_pass/change_password_cubit.dart';
 import 'package:youth_care/logic/login/login_cubit.dart';
 import 'package:youth_care/logic/news/news_cubit.dart';
 import 'package:youth_care/logic/requests/request_cubit.dart';
@@ -9,6 +10,7 @@ import 'package:youth_care/presentation/layout/layout_screen.dart';
 import 'package:youth_care/presentation/login/login_screen.dart';
 import 'package:youth_care/presentation/news/add_news/add_news.dart';
 import 'package:youth_care/presentation/news/news_screen.dart';
+import 'package:youth_care/presentation/settings/change_password.dart';
 import 'package:youth_care/presentation/settings/contact_screen.dart';
 import 'package:youth_care/presentation/settings/dean_speech.dart';
 import 'package:youth_care/presentation/splash/splash_screen.dart';
@@ -39,6 +41,9 @@ class YouthCare extends StatelessWidget {
         BlocProvider(
           create: (context) => RequestCubit(),
         ),
+        BlocProvider(
+          create: (context) => ChangePasswordCubit(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -47,7 +52,8 @@ class YouthCare extends StatelessWidget {
         routes: {
           SplashScreen.id: (context) => const SplashScreen(),
           LoginScreen.id: (context) => LoginScreen(),
-          AddNews.id: (context) => AddNews(),
+          AddNews.id: (context) =>const AddNews(),
+          ChangePassword.id: (context) => ChangePassword(),
           DeanSpeech.id: (context) =>const DeanSpeech(),
           ContactScreen.id: (context) => ContactScreen(),
           NewsScreen.id: (context) => NewsScreen(),
